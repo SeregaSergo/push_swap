@@ -6,11 +6,32 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 20:12:08 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/27 22:47:35 by bswag            ###   ########.fr       */
+/*   Updated: 2021/04/28 21:45:54 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	error_msg(void)
+{
+	ft_putendl_fd("Error", 2);
+	exit(1);
+}
+
+int		check_result(t_list *a)
+{
+	int prev;
+	
+	prev = INT_MIN;
+	while (a)
+	{
+		if (*((long long int *)a->content) < prev)
+			return (1);
+		prev = *((long long int *)a->content);
+		a = a->next;
+	}
+	return (0);
+}
 
 int		check_int(long long int arg, t_list *a)
 {

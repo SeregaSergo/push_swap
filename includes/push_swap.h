@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:10:33 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/27 22:48:09 by bswag            ###   ########.fr       */
+/*   Updated: 2021/04/28 18:40:28 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ int		f_reverse(t_list **stack);
 int		f_rotate(t_list **stack);
 int		f_swap(t_list **stack);
 void	print_stacks(t_list *a, t_list *b);
+void    error_msg(void);
+int		check_result(t_list *a);
+int		do_operation(char *oper, t_list **a, t_list **b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 22:46:15 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/27 22:52:09 by bswag            ###   ########.fr       */
+/*   Updated: 2021/04/28 20:51:23 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	print_line_stack(long long int a_elem, long long int b_elem)
 		ft_putnbr_fd((int)a_elem, 1);
 	else
 		ft_putstr_fd(" ", 1);
-	i = a_elem <= INT_MAX ? 12 - ft_get_dimention(a_elem) : 0;
+	i = a_elem <= INT_MAX ? 12 - ft_get_dimention(a_elem) : 11;
 	i = b_elem < 0 ? i - 1: i;
 	while (i-- > 0)
 		ft_putstr_fd(" ", 1);

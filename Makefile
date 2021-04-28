@@ -6,7 +6,7 @@
 #    By: bswag <bswag@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/20 17:19:13 by bswag             #+#    #+#              #
-#    Updated: 2021/04/27 22:48:19 by bswag            ###   ########.fr        #
+#    Updated: 2021/04/28 19:38:36 by bswag            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,11 @@ SRCS1 =		checker.c \
 			operations.c \
 			dbl_operations.c \
 			printing.c
-SRCS2 =		push_swap.c
+SRCS2 =		push_swap.c \
+			fill_stack_a.c \
+			operations.c \
+			dbl_operations.c \
+			printing.c
 PATHSRC =	./srcs/
 OBJS1 =		$(SRCS1:%.c=%.o)
 OBJS2 =		$(SRCS2:%.c=%.o)
