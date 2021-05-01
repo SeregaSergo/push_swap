@@ -6,15 +6,15 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 17:43:01 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/27 17:44:47 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/01 20:41:44 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 long long int	ft_atoi_long(const char *str)
 {
 	long long int	result;
-	int	sign;
-	int i;
+	int				sign;
+	int				i;
 
 	result = 0;
 	sign = 1;

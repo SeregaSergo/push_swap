@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 15:32:55 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/27 21:27:23 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/01 20:02:39 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include "get_next_line.h"
+# include "get_next_line.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
 
-typedef struct		s_bdlist
+typedef struct s_bdlist
 {
 	void			*cont;
 	struct s_bdlist	*next;
@@ -92,6 +92,6 @@ t_list				*ft_lst_unlink_last(t_list **lst);
 t_bdlist			*ft_bdlstnew(void *content);
 void				ft_bdlstadd_front(t_bdlist **lst, t_bdlist *n);
 int					ft_bdlstsize(t_bdlist *lst);
-t_bdlist    		*ft_bdlstfind(t_bdlist *list, int pos);
+t_bdlist			*ft_bdlstfind(t_bdlist *list, int pos);
 
 #endif

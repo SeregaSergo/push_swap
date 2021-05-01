@@ -1,34 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dbl_operations.c                                   :+:      :+:    :+:   */
+/*   utils_func.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/27 22:31:11 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/01 14:42:50 by bswag            ###   ########.fr       */
+/*   Created: 2021/05/01 15:03:37 by bswag             #+#    #+#             */
+/*   Updated: 2021/05/01 17:31:48 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	f_dbl_swap(t_list **a, t_list **b)
+int	abs(int x)
 {
-	f_swap(a);
-	f_swap(b);
-	return (0);
+	if (x < 0)
+		return (-x);
+	else
+		return (x);
 }
 
-int	f_dbl_rotate(t_list **a, t_list **b)
+int	min_abs(int a, int b)
 {
-	f_rotate(a);
-	f_rotate(b);
-	return (0);
+	a = abs(a);
+	b = abs(b);
+	if (a > b)
+		return (b);
+	else
+		return (a);
 }
 
-int	f_dbl_reverse(t_list **a, t_list **b)
+int	max_abs(int a, int b)
 {
-	f_reverse(a);
-	f_reverse(b);
+	a = abs(a);
+	b = abs(b);
+	if (a < b)
+		return (b);
+	else
+		return (a);
+}
+
+int	do_oper_print(char *oper, t_list **a, t_list **b, int n)
+{
+	while (n > 0)
+	{
+		do_operation(oper, a, b);
+		ft_putendl_fd(oper, 1);
+		n--;
+	}
 	return (0);
 }

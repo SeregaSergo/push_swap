@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 20:12:08 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/28 21:45:54 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/01 16:51:28 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,35 +18,35 @@ void	error_msg(void)
 	exit(1);
 }
 
-int		check_result(t_list *a)
+int	check_result(t_list *a)
 {
-	int prev;
-	
+	int	prev;
+
 	prev = INT_MIN;
 	while (a)
 	{
-		if (*((long long int *)a->content) < prev)
+		if (*((t_p_cntnt)a->content) < prev)
 			return (1);
-		prev = *((long long int *)a->content);
+		prev = *((t_p_cntnt)a->content);
 		a = a->next;
 	}
 	return (0);
 }
 
-int		check_int(long long int arg, t_list *a)
+int	check_int(t_cntnt arg, t_list *a)
 {
 	if (arg < INT_MIN || arg > INT_MAX)
 		return (1);
 	while (a)
 	{
-		if (*((long long int *)a->content) == arg)
+		if (*((t_p_cntnt)a->content) == arg)
 			return (1);
 		a = a->next;
 	}
 	return (0);
 }
 
-int		is_number(char *arg)
+int	is_number(char *arg)
 {
 	if (*arg == '-' || *arg == '+')
 		arg++;
@@ -56,26 +56,28 @@ int		is_number(char *arg)
 			return (1);
 		arg++;
 	}
-	return (0);    
+	return (0);
 }
 
-int		fill_stack_a(char **argv, t_list **a)
+int	fill_stack_a(char **argv, t_list **a)
 {
-	long long int   arg;
-	long long int   *new_cont;
-	t_list          *new;
-	
+	long long int	arg;
+	long long int	*new_cont;
+	t_list			*new;
+
 	while (*argv != NULL)
 	{
 		if (is_number(*argv))
-			return(1);
+			return (1);
 		arg = ft_atoi_long(*argv);
 		if (check_int(arg, *a))
 			return (1);
-		if (!(new_cont = (long long int *)malloc(sizeof(long long int))))
+		new_cont = (t_p_cntnt)malloc(sizeof(t_cntnt));
+		if (!new_cont)
 			return (1);
 		*new_cont = arg;
-		if (!(new = ft_lstnew(new_cont)))
+		new = ft_lstnew(new_cont);
+		if (!new)
 			return (1);
 		ft_lstadd_back(a, new);
 		argv++;

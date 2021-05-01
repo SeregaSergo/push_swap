@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:29:15 by bswag             #+#    #+#             */
-/*   Updated: 2021/02/01 22:10:25 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/01 19:20:51 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ size_t	gnl_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (0);
 }
 
-int		gnl_strchr(const char *s, int c)
+int	gnl_strchr(const char *s, int c)
 {
 	int		i;
 

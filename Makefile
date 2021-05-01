@@ -6,7 +6,7 @@
 #    By: bswag <bswag@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/20 17:19:13 by bswag             #+#    #+#              #
-#    Updated: 2021/04/30 18:11:14 by bswag            ###   ########.fr        #
+#    Updated: 2021/05/01 20:54:26 by bswag            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,15 @@ SRCS1 =		checker.c \
 			fill_stack_a.c \
 			operations.c \
 			dbl_operations.c \
-			printing.c
+			utils_func.c
 SRCS2 =		push_swap.c \
 			fill_stack_a.c \
 			operations.c \
 			dbl_operations.c \
-			printing.c \
-			push_back.c
+			push_back.c \
+			utils_func.c \
+			push_forward.c \
+			oper_counter.c
 PATHSRC =	./srcs/
 OBJS1 =		$(SRCS1:%.c=%.o)
 OBJS2 =		$(SRCS2:%.c=%.o)
@@ -52,9 +54,9 @@ $(LIB):
 bonus: all
 
 clean:
-	/bin/rm -f $(addprefix $(PATHSRC), $(OBJS))
+	/bin/rm -f $(addprefix $(PATHSRC), $(OBJS1)) $(addprefix $(PATHSRC), $(OBJS2))
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME1) $(NAME2)
 
 re: fclean all

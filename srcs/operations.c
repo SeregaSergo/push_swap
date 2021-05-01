@@ -6,16 +6,16 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/27 20:06:39 by bswag             #+#    #+#             */
-/*   Updated: 2021/04/28 19:34:23 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/01 14:44:24 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		f_swap(t_list **stack)
+int	f_swap(t_list **stack)
 {
 	void	*tmp;
-	
+
 	if (stack && *stack && (*stack)->next)
 	{
 		tmp = (*stack)->content;
@@ -25,10 +25,10 @@ int		f_swap(t_list **stack)
 	return (0);
 }
 
-int		f_rotate(t_list **stack)
+int	f_rotate(t_list **stack)
 {
 	t_list	*tmp;
-	
+
 	if (*stack)
 	{
 		tmp = *stack;
@@ -39,10 +39,10 @@ int		f_rotate(t_list **stack)
 	return (0);
 }
 
-int		f_reverse(t_list **stack)
+int	f_reverse(t_list **stack)
 {
 	t_list	*tmp;
-	
+
 	if (*stack)
 	{
 		tmp = ft_lst_unlink_last(stack);
@@ -51,10 +51,10 @@ int		f_reverse(t_list **stack)
 	return (0);
 }
 
-int		f_push(t_list **src, t_list **dst)
+int	f_push(t_list **src, t_list **dst)
 {
 	t_list	*tmpsrc;
-	
+
 	if (*src)
 	{
 		tmpsrc = *src;
@@ -65,7 +65,7 @@ int		f_push(t_list **src, t_list **dst)
 	return (0);
 }
 
-int		do_operation(char *oper, t_list **a, t_list **b)
+int	do_operation(char *oper, t_list **a, t_list **b)
 {
 	if (!ft_strncmp(oper, "sa", 3))
 		return (f_swap(a));
