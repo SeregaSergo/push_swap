@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:04:59 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/01 18:38:46 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/02 15:38:04 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,7 @@ int	main(int argc, char **argv)
 	if (fill_stack_a(&argv[1], &a))
 		error_msg();
 	sort_stack(&a, &b);
+	ft_lstclear(&a, free);
+	ft_lstclear(&b, free);
 	return (0);
 }

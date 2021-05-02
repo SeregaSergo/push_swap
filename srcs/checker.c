@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:07:35 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/01 17:03:45 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/02 15:37:48 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,7 @@ int	main(int argc, char **argv)
 		ft_putendl_fd("KO", 1);
 	else
 		ft_putendl_fd("OK", 1);
+	ft_lstclear(&a, free);
+	ft_lstclear(&b, free);
 	return (0);
 }
