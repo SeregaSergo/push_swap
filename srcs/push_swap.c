@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:04:59 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/02 15:38:04 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/03 16:47:19 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	sort_stack(t_list **a, t_list **b)
 		do_oper_print("pa", a, b, 1);
 	}
 	max_min_elem_list(*a, &mml);
-	if (mml.min_pos < (ft_lstsize(*a) / 2))
+	if (mml.min_pos <= (ft_lstsize(*a) / 2))
 		do_oper_print("ra", a, b, mml.min_pos);
 	else
 		do_oper_print("rra", a, b, ft_lstsize(*a) - mml.min_pos);

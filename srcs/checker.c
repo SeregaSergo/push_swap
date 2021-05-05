@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:07:35 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/02 15:37:48 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/05 15:19:55 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,9 +108,7 @@ int	main(int argc, char **argv)
 	int		mode;
 
 	b = NULL;
-	mode = !ft_strncmp(argv[1], "-v", 3);
-	if (argc < 2 && (mode && argc < 3))
-		exit(0);
+	mode = get_mode(argc, argv);
 	if (mode)
 	{
 		if (fill_stack_a(&argv[2], &a))

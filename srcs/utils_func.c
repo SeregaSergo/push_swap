@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/01 15:03:37 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/01 17:31:48 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/05 15:13:28 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,16 @@ int	do_oper_print(char *oper, t_list **a, t_list **b, int n)
 		n--;
 	}
 	return (0);
+}
+
+int	get_mode(int argc, char **argv)
+{
+	int	mode;
+
+	if (argc < 2)
+		exit(0);
+	mode = !ft_strncmp(argv[1], "-v", 3);
+	if (mode && argc < 3)
+		exit(0);
+	return (mode);
 }

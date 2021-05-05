@@ -6,7 +6,7 @@
 /*   By: bswag <bswag@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 21:10:33 by bswag             #+#    #+#             */
-/*   Updated: 2021/05/01 19:19:54 by bswag            ###   ########.fr       */
+/*   Updated: 2021/05/05 15:12:08 by bswag            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ int		what_to_reverse(t_list *a, t_list *b, t_cntnt mod_a, t_cntnt mod_b);
 int		what_to_rotate(t_list *a, t_list *b, t_cntnt mod_a, t_cntnt mod_b);
 void	part(t_p_cntnt ar, int start_pos, int end_pos);
 int		how_many_oper(t_list *a, t_oper *oper, t_cntnt x);
+int		get_mode(int argc, char **argv);
 
 #endif
